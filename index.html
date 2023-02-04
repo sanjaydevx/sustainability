@@ -90,7 +90,7 @@
             Statistical insights and more recently Predictive analysis are my immediate topics of interest. 
           </p>
           <p>
-            I find <a href="https://julialang.org/" class="link-danger">Julia</a> as a versatile language for performing data analysis and for use in scientific computing. All work presented here 
+            I find <a href="https://julialang.org/" class="link-warning">Julia</a> as a versatile language for performing data analysis and for use in scientific computing. All work presented here 
             uses Julia, unless stated otherwise.
           </p>
         </div>
@@ -155,56 +155,68 @@
           <p><a href="https://www.kaggle.com/datasets/mkechinov/ecommerce-purchase-history-from-electronics-store" class="link-primary">eCommerce purchase history</a>
             datasets from Kaggle and data crawled from product descriptions have been used for this analysis.
           </p>
+          <p>
+            Julia source code for this analysis is available as Open Source here : <a href="https://github.com/sanjaydevx/ewaste/blob/main/src/EwasteAnalysis.jl" class="link-primary">eWaste analysis source code</a>
+          </p>
         </div>
 
-        <div class="row gy-4 portfolio-container">
+        <div class="row gy-8 portfolio-container">
 
-          <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+          <div class="col-xl-6 col-md-8 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/pie_largestcat_value.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <p>This chart illustrates the split of electronics contributing significantly to the total value of goods sold</p>
+                <img src="assets/img/pie_largestcat_value.png" class="img-fluid" alt="">
               </div>
             </div>
           </div><!-- End eWaste Item -->
 
-          <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+          <div class="col-xl-6 col-md-8 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/pie_largestcat_volume.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <p>This chart illustrates the split of electronics contributing significantly to the total volume of goods sold</p>              </div>
-            </div>
-          </div><!-- End eWaste Item -->
-
-          <div class="col-xl-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/charts/pie-chart-sample.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <p>Info about this chart</p>
+                <img src="assets/img/pie_largestcat_volume.png" class="img-fluid" alt="">
               </div>
             </div>
           </div><!-- End eWaste Item -->
 
-          <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+          <div class="col-xl-6 col-md-8 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/charts/pie-chart-sample.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <p>Info about this chart</p>
+                <p class="fst-italic">
+                  Insights:
+                </p>
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> Smartphones is the largest category by volume and value</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Smartphones battery is usually Li-ion, manufacturing of which has substantial environment impact</li>                  
+                </ul>                
+                <p class="fst-italic">
+                  Further reading:
+                </p>
+                <ul>
+                  <li><i class="bi bi-check-circle-fill"></i> <a href="#economicfactors" class="link-primary">Economic factors</a> governing use of batteries</li>                  
+                  <li><i class="bi bi-check-circle-fill"></i> <a href="https://www.responsiblebatterycoalition.org/" class="link-primary">Responsible Battery Coalition</a> of companies and academia committed to the responsible management of the batteries</li>
+                </ul>                
               </div>
             </div>
-          </div><!-- End eWaste Item -->
-
-          <div class="col-xl-4 col-md-6 portfolio-item filter-app">
+          </div><!-- End insights -->
+          <div class="col-xl-6 col-md-8 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/charts/pie-chart-sample.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <p>Info about this chart</p>
+                <p>Julia function code snippet</p>
+                  <code>
+                    <pre class="pre-scrollable">                      
+#Calculate % contribution of products by value and get significant data
+
+function percentagecalc(value,baseval,arrayreq,temp,arrayout,arrayvalues,smallest,x,frame,arraymain)
+  value = (value*100)/baseval 
+  arrayvalues = frame[frame[!,Symbol(x)] .>=(sum(arraymain)*smallest/100) ,:]
+  ....... 
+end
+                    </pre>
+                </code>  
               </div>
             </div>
-          </div><!-- End eWaste Item -->
-
+          </div><!-- End code snippet -->
         </div><!-- End Portfolio Container -->
-
       </div>
     </section><!-- End e-Waste Section -->
 
