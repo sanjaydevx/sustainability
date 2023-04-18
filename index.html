@@ -79,19 +79,17 @@
         <div class="col-lg-8 order-2 order-lg-1 d-flex flex-column justify-content-center text-center text-lg-start">
           <h2>Welcome to <span>Sustainability Insights</span></h2>
           <p>
-            A collection of insights that I have gained around Sustainability through analysis of publicly available data. 
+            A reposistory of my small but non trivial projects to make our way of life more sustainable and the insights gained by doing the same. 
           </p>
           <p>
-            I have been fascinated by the various dimensions of Sustainability - Economic, Social, Environment and Technology.
-            I am trying to understand and work on means to promote Sustainability; through Refurbishing, Battery technology that makes Electric vehicles viable.
+            Most of the technology used today was designed to work on fossil fuels. This however, has to change for the better by being sustainable. Having an avid interest in Physics that later morphed into an interest in Engineering, I want to contribute to this so called 'revolution' by helping build technology for a greener and more prosperous future.
           </p>
           <p>
-            The intersection of Hardware(Electrical and Electronics engineering) and Software(Computer Science) is pretty exciting and an area I would like to pursue in my graduate studies.
-            Statistical insights and more recently Predictive analysis are my immediate topics of interest. 
+            Electrical and Electronics engineering is my immediate area of interest as the inner functions of the machines we use today could be made more sustainable in various ways. This means making today's tech more efficient, economically viable and powered by green energy. This coupled with Computer Science, something that does things at a scale and rate that humans simply can't match, would help revolutionize world and I want to be a part of it. 
           </p>
           <p>
             I find <a href="https://julialang.org/" class="link-warning">Julia</a> as a versatile language for performing data analysis and for use in scientific computing. All work presented here 
-            uses Julia, unless stated otherwise.
+            uses Julia, unless stated otherwise. Julia is fast, making it one of the most efficient languages for a host of functions. 
           </p>
         </div>
         <div class="col-lg-4 order-1 order-lg-2">
@@ -186,7 +184,7 @@
                 </p>
                 <ul>
                   <li><i class="bi bi-check-circle-fill"></i> Smartphones is the largest category by volume and value</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Smartphones battery is usually Li-ion, manufacturing of which has substantial environment impact</li>                  
+                  <li><i class="bi bi-check-circle-fill"></i> Smartphones' batteries are usually Li-ion, manufacturing of which has <a href="https://www.wired.co.uk/article/lithium-batteries-environment-impact" class="link primary">substantial environment impact</a></li>                  
                 </ul>                
                 <p class="fst-italic">
                   Further reading:
@@ -204,12 +202,15 @@
                 <p>Julia function code snippet</p>
                   <code>
                     <pre class="pre-scrollable">                      
-#Calculate % contribution of products by value and get significant data
-
-function percentagecalc(value,baseval,arrayreq,temp,arrayout,arrayvalues,smallest,x,frame,arraymain)
-  value = (value*100)/baseval 
-  arrayvalues = frame[frame[!,Symbol(x)] .>=(sum(arraymain)*smallest/100) ,:]
-  ....... 
+#Get total value per item 
+function populatetotalvalue!(arrayout,list,x)
+  local indiprices = 0
+    for counter in list
+    test = data[data[!,Symbol(x)] .== counter,:]
+    indiprices = sum(test.price)
+    push!(arrayout,indiprices)
+    indiprices = 0
+    end
 end
                     </pre>
                 </code>  
@@ -239,9 +240,10 @@ end
                 About me:
               </p>
               <ul>
-                <li><i class="bi bi-check-circle-fill"></i> IBDP1 student at Candor International School</li>
-                <li><i class="bi bi-check-circle-fill"></i> Like Physics & Math. Dabble in programming(Julia, Python) and interested in Economics </li>
-                <li><i class="bi bi-check-circle-fill"></i> Play & represent my school in Badminton, Volleyball</li>
+                <li><i class="bi bi-check-circle-fill"></i> IBDP student at Candor International School</li>
+                <li><i class="bi bi-check-circle-fill"></i> Deeply interested in Physics & Math. Dabble in programming (Julia, Python) and like Economics </li>
+                <li><i class="bi bi-check-circle-fill"></i> Play & represent my school in Badminton and Volleyball</li>
+                <li><i class="bi bi-check-circle-fill"></i> Founder of a STEAM club - Logos, whose focus is on sustainable technology and the economics of building a sustainable future</li>
               </ul>
               <p>
                 Title for the video
