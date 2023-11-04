@@ -1990,6 +1990,7 @@ section {
 
 .hero .icon-boxes {
   padding-bottom: 60px;
+  
 }
 
 @media (min-width: 1200px) {
@@ -2037,6 +2038,9 @@ section {
   font-size: 48px;
   line-height: 1;
   color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero .icon-box:hover {
